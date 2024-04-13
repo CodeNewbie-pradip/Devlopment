@@ -1,0 +1,140 @@
+
+   body {
+    background-color: #0c133b;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+  }
+  body {
+    background: linear-gradient(-45deg, #0c133b, #32d3e7, #a4f3d7, #d1e0db);
+    background-size: 500% 500%;
+    animation: gradient 10s ease infinite;
+    height: 100%;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+      25% {
+        background-position: 0% 50%;
+      }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .heading {
+    font-family: 'Pacifico', cursive;
+    margin: 35px auto 20px;
+  }
+  
+  hr {
+    border-top: 2px solid rgb(255, 0, 0);
+    width: 40%;
+    margin-bottom: 55px;
+  }
+  
+  .main {
+    width: 50vw;
+    margin: auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #32d3e7;
+    color: rgb(255, 255, 255);
+  }
+  
+  label {
+    font-size: 20px;
+  }
+  
+  .btn {
+    width: 200px;
+  }
+  
+  #finalAmount {
+    font-family: 'Lobster', cursive;
+    display: none;
+    margin: 50px auto;
+  }
+  
+  #finalAmount h2 {
+    font-size: 50px;
+  }
+  
+  .finalValue {
+    font-family: 'Amiri', serif;
+  }
+  
+  @media (max-width: 768px) {
+    hr {
+      width: 60%;
+    }
+  
+    .main {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .heading {
+      font-size: 60px;
+    }
+  
+    hr {
+      width: 75%;
+    }
+  
+    #finalAmount h2,
+    .finalValue {
+      font-size: 40px;
+    }
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .container .btn {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 50px;
+    margin: 0;
+  }
+  
+  .container .btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: -5px;
+    width:100%;
+    height: 1px;
+    transition: 0.5s;
+    transition-delay: 0.5;
+  }
+  .container .btn:hover::after /*lightup button*/ {
+    top: 0;
+    height: 10%;
+    width: 100%;
+    border-radius: 30px;
+  }
+   /*chnage 1*/
+  .container .btn:nth-child(1)::after {
+    background: #ebf4f1;
+    box-shadow: 0 0 5px #ebf4f1, 0 0 15px #ebf4f1, 0 0 30px #ebf4f1,
+      0 0 60px #ebf4f1;
+  }
+   /* 2*/
+  .container .btn:nth-child(2)::after {
+    background: #ffcccc;
+    box-shadow: 0 0 5px #ffcccc, 0 0 15px #ffcccc, 0 0 30px #ffcccc,
+      0 0 60px #ffcccc;
+  }
